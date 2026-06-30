@@ -1,5 +1,6 @@
 package org.dmitri.HibernateCore;
 
+import org.dmitri.EntityLC.Ticket;
 import org.dmitri.HibernateCore.Practic.Movie;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -13,6 +14,7 @@ public class HibernateConfiguration {
         Configuration configuration = new Configuration();
 
         configuration
+                .addAnnotatedClass(Ticket.class)
                 .addAnnotatedClass(Student.class)
                 .addAnnotatedClass(Movie.class)
                 .addPackage("org.dmitri")
